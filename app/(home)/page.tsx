@@ -3,11 +3,12 @@
 import { format } from "date-fns";
 import Header from "../_components/header";
 import { ptBR } from "date-fns/locale";
+import Search from "./_components/search";
 
 export default function Home() {
   return (
     <div>
-      <Header></Header>
+      <Header/>
 
       <div className="p-5">
         <h2 className="text-xl font-bold">Olá, Lucas!</h2>
@@ -16,8 +17,12 @@ export default function Home() {
           {format(new Date(), "EEEE',' d 'de' MMMM 'de' yyyy " , 
           { locale: ptBR })}
         </p>
+      
 
+      </div>
 
+      <div className="px-5 mt-6">
+        <Search/>
       </div>
     </div>
 
